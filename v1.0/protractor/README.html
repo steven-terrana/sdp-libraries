@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Protractor &mdash; SDP Pipeline Libraries  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/banner.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SDP" href="../sdp/README.html" />
+    <link rel="prev" title="OWASP ZAP" href="../owasp_zap/README.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SDP Pipeline Libraries
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../a11y/README.html">The A11y Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docker/README.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github/README.html">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github_enterprise/README.html">GitHub Enterprise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openshift/README.html">OpenShift</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../owasp_dep_check/README.html">OWASP Dependency Check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../owasp_zap/README.html">OWASP ZAP</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Protractor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#steps-provided">Steps Provided</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#library-configurations">Library Configurations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-configuration-snippet">Example Configuration Snippet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sdp/README.html">SDP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../slack/README.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sonarqube/README.html">SonarQube</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../twistlock/README.html">Twistlock</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SDP Pipeline Libraries</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Protractor</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/protractor/README.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+
+
+    
+    
+
+
+
+    <p class="scv-banner scv-sphinx_rtd_theme"><a href="../../master/protractor/README.html"><b>Warning:</b> This document is for an old version of SDP Pipeline Libraries. The main version is master.</a></p>
+<div class="section" id="protractor">
+<h1>Protractor<a class="headerlink" href="#protractor" title="Permalink to this headline">¶</a></h1>
+<p>Protractor is a test framework built for Angular and AngularJS applications that is used for end-to-end testing. The framework simulates user activity using the web application by running a developer’s tests on a real browser. It adds a layer of tests to help ensure that newly added front-end code does not break already existing functionality or the build itself.</p>
+<div class="section" id="steps-provided">
+<h2>Steps Provided<a class="headerlink" href="#steps-provided" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>functional_test()</li>
+</ul>
+</div>
+<div class="section" id="library-configurations">
+<h2>Library Configurations<a class="headerlink" href="#library-configurations" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils" id="id1">
+<caption><span class="caption-text">Protractor Library Configuration Options</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+<th class="head">Default Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>url</td>
+<td>Url for the website that will be tested</td>
+<td>none</td>
+</tr>
+<tr class="row-odd"><td>enforce</td>
+<td>Boolean value that determines if a build will fail if a Protractor test fails</td>
+<td>none</td>
+</tr>
+<tr class="row-even"><td>config_file</td>
+<td>Name of the file where the Protractor configurations are set</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="example-configuration-snippet">
+<h3>Example Configuration Snippet<a class="headerlink" href="#example-configuration-snippet" title="Permalink to this headline">¶</a></h3>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">libraries</span><span class="p">{</span>
+  <span class="n">protractor</span> <span class="p">{</span>
+     <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://frontend-website.com&quot;</span>
+     <span class="n">enforce</span> <span class="o">=</span> <span class="n">true</span>
+     <span class="n">config_file</span> <span class="o">=</span> <span class="s2">&quot;protractor.conf.js&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../sdp/README.html" class="btn btn-neutral float-right" title="SDP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../owasp_zap/README.html" class="btn btn-neutral float-left" title="OWASP ZAP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Booz Allen Hamilton
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: v1.0
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Tags</dt>
+            <dd><a href="../../jenkins-test/protractor/README.html">jenkins-test</a></dd>
+            <dd><a href="README.html">v1.0</a></dd>
+        </dl>
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="../../master/protractor/README.html">master</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

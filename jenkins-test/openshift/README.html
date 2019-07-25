@@ -1,0 +1,528 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>OpenShift &mdash; SDP Pipeline Libraries  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/banner.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OWASP Dependency Check" href="../owasp_dep_check/README.html" />
+    <link rel="prev" title="GitHub Enterprise" href="../github_enterprise/README.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SDP Pipeline Libraries
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../a11y/README.html">The A11y Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docker/README.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github/README.html">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github_enterprise/README.html">GitHub Enterprise</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">OpenShift</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#steps-provided">Steps Provided</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#library-configurations">Library Configurations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#openshift-url">OpenShift URL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#helm-configuration">Helm Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#promoting-images">Promoting Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#putting-it-all-together">Putting It All Together</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#external-dependencies">External Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../owasp_dep_check/README.html">OWASP Dependency Check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../owasp_zap/README.html">OWASP ZAP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../protractor/README.html">Protractor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdp/README.html">SDP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../slack/README.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sonarqube/README.html">SonarQube</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../twistlock/README.html">Twistlock</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SDP Pipeline Libraries</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>OpenShift</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/openshift/README.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+
+
+    
+    
+
+
+
+    <p class="scv-banner scv-sphinx_rtd_theme"><a href="../../master/openshift/README.html"><b>Warning:</b> This document is for an old version of SDP Pipeline Libraries. The main version is master.</a></p>
+<div class="section" id="openshift">
+<h1>OpenShift<a class="headerlink" href="#openshift" title="Permalink to this headline">¶</a></h1>
+<p>OpenShift is an enterprise grade distribution of Kubernetes built by Red Hat. For information on
+deploying OpenShift inside Booz Allen’s CSN AWS environment, refer to our
+<span class="xref std std-ref">guide</span></p>
+<p>This library allows you to perform deployments to static or ephemeral application environments with
+<a class="reference external" href="https://helm.sh/">Helm</a></p>
+<div class="section" id="steps-provided">
+<h2>Steps Provided<a class="headerlink" href="#steps-provided" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>deploy_to</li>
+<li>ephemeral</li>
+</ul>
+</div>
+<div class="section" id="library-configurations">
+<h2>Library Configurations<a class="headerlink" href="#library-configurations" title="Permalink to this headline">¶</a></h2>
+<p>The configurations for the OpenShift library can be specified at multiple levels. Given this
+additional configurability the typical table of configuration options would be less clear than
+examples, so we’ll be breaking it down per configuration portion.</p>
+<div class="section" id="openshift-url">
+<h3>OpenShift URL<a class="headerlink" href="#openshift-url" title="Permalink to this headline">¶</a></h3>
+<p>The OpenShift URL can be defined in the library spec or on a per application environment basis.</p>
+<p>For example, it’s common to have a cluster for lower environments with a separate cluster for
+production.  You would specify this as follows:</p>
+<div class="code groovy highlight-default"><div class="highlight"><pre><span></span><span class="n">application_environments</span><span class="p">{</span>
+  <span class="n">dev</span><span class="p">{</span>
+    <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;dev&quot;</span>
+    <span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;Development&quot;</span>
+  <span class="p">}</span>
+  <span class="n">test</span><span class="p">{</span>
+    <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span>
+    <span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;Test&quot;</span>
+  <span class="p">}</span>
+  <span class="n">prod</span><span class="p">{</span>
+    <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;prod&quot;</span>
+    <span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;Production&quot;</span>
+    <span class="n">openshift_url</span> <span class="o">=</span> <span class="s2">&quot;https://openshift.prod.example.com:8443&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">libraries</span><span class="p">{</span>
+  <span class="n">openshift</span><span class="p">{</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://openshift.dev.example.com:8443&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>With this configuration, <code class="docutils literal"><span class="pre">https://openshift.dev.example.com:8443</span></code> would be used when deploying
+to <code class="docutils literal"><span class="pre">dev</span></code> and <code class="docutils literal"><span class="pre">test</span></code> while <code class="docutils literal"><span class="pre">https://openshift.prod.example.com:8443</span></code> would be used when
+deploying to <code class="docutils literal"><span class="pre">prod</span></code></p>
+</div>
+<div class="section" id="helm-configuration">
+<h3>Helm Configuration<a class="headerlink" href="#helm-configuration" title="Permalink to this headline">¶</a></h3>
+<p>We use <a class="reference external" href="https://helm.sh/">Helm</a> for a deployment mechanism to OpenShift.  Helm is a package manager and templating
+engine for Kubernetes manifests.  Using Helm, the typical YAML manifests used to deploy to
+Kubernetes distributions can be templatized for reuse.  In our case, a different values file is
+used for each static application environment.</p>
+<p><strong>Deploy the Tiller Server</strong></p>
+<p>You can configure Helm for multitenancy by using our
+<span class="xref std std-ref">environment provisioning script</span>.</p>
+<p>Instead of using Helm as a package manager by bundling the charts and deploying them to a chart
+repository, we instead use a configuration repository as our infrastructure as code mechanism.</p>
+<p><strong>Create Helm Configuration Repository</strong></p>
+<p>You’ll need to create a GitHub repository to store the helm chart for your application(s). See the
+<a class="reference external" href="https://docs.helm.sh/helm/#helm-create">helm docs on provisioning a new chart</a> to get intialize the repository with the skeleton for your chart.</p>
+<p>How you choose to build your helm chart is up to you, you can put every api object in the <code class="docutils literal"><span class="pre">templates</span></code>
+directory or have subcharts for each individual microservice.  SDP doesn’t care, as all it does is clone
+the github repository and deploy the chart using the specified values file.</p>
+<p><strong>Values File Conventions</strong></p>
+<p>Given that we tag container images using the git SHA, SDP will clone your helm configuration repository and
+update a key corresponding to the current version of each container image for each application environment.</p>
+<p>As such, a certain syntax is required in your values file.  You must have an <code class="docutils literal"><span class="pre">image_shas</span></code> key. SDP will
+automatically add subkeys for each repositories under this <code class="docutils literal"><span class="pre">image_shas</span></code> with a value that is the git SHA.</p>
+<p><cite>Given that YAML keys can’t have hypens, hyphens in repository names will be replaced with underscores.</cite></p>
+<div class="code yaml highlight-default"><div class="highlight"><pre><span></span><span class="n">image_shas</span><span class="p">:</span>
+  <span class="n">my_sample_application</span><span class="p">:</span> <span class="n">abcdefgh</span>
+  <span class="n">another_repo</span><span class="p">:</span> <span class="n">abcdef</span>
+</pre></div>
+</div>
+<p>you can add whatever other keys are necessary to appropriately parameterize your helm chart.</p>
+<p><strong>Helm Configurations for the Library</strong></p>
+<p>The helm configuration repository, github credential, tiller namespace, and tiller credential  can be configured
+globally in the library spec and overriden for specific application environments.</p>
+<p>The values file to will default to <code class="docutils literal"><span class="pre">values.${app_env.short_name}.yaml</span></code>, or can be overridden via <code class="docutils literal"><span class="pre">app_env.chart_values_file</span></code>.</p>
+<p>The name of the release will default to <code class="docutils literal"><span class="pre">app_env.short_name</span></code>, or can be overridden via <code class="docutils literal"><span class="pre">app_env.tiller_release_name</span></code></p>
+<p>An example of helm configurations:</p>
+<div class="code groovy highlight-default"><div class="highlight"><pre><span></span><span class="n">application_environments</span><span class="p">{</span>
+  <span class="n">dev</span><span class="p">{</span>
+    <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;dev&quot;</span>
+    <span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;Development&quot;</span>
+    <span class="n">chart_values_file</span> <span class="o">=</span> <span class="s2">&quot;dev_values.yaml&quot;</span>
+  <span class="p">}</span>
+  <span class="n">test</span><span class="p">{</span>
+    <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span>
+    <span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;Test&quot;</span>
+    <span class="n">tiller_release_name</span> <span class="o">=</span> <span class="s2">&quot;banana&quot;</span>
+
+  <span class="p">}</span>
+  <span class="n">prod</span><span class="p">{</span>
+    <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;prod&quot;</span>
+    <span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;Production&quot;</span>
+    <span class="n">tiller_namespace</span> <span class="o">=</span> <span class="s2">&quot;rhs-tiller-prod&quot;</span>
+    <span class="n">tiller_credential</span> <span class="o">=</span> <span class="s2">&quot;rhs-tiller-prod&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">libraries</span><span class="p">{</span>
+  <span class="n">openshift</span><span class="p">{</span>
+    <span class="n">helm_configuration_repository</span> <span class="o">=</span> <span class="s2">&quot;https://github.boozallencsn.com/Red-Hat-Summit/helm-configuration.git&quot;</span>
+    <span class="n">helm_configuration_repository_credential</span> <span class="o">=</span> <span class="s2">&quot;github&quot;</span>
+    <span class="n">tiller_namespace</span> <span class="o">=</span> <span class="s2">&quot;rhs-tiller&quot;</span>
+    <span class="n">tiller_credential</span> <span class="o">=</span> <span class="s2">&quot;rhs-tiller&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="promoting-images">
+<h3>Promoting Images<a class="headerlink" href="#promoting-images" title="Permalink to this headline">¶</a></h3>
+<p>It’s often beneficial to build a container image once, and then promote that image
+through different application environments. This makes it possible to test the
+content of an image once in a lower environment, and remain confident that the
+results of those tests would be the same as an image is promoted. Promoting
+images also speeds up the CI/CD pipeline, as building a container image is often
+the most time-consuming part of the pipeline.</p>
+<p>By default, the <code class="docutils literal"><span class="pre">deploy_to()</span></code> step of the Openshift pipeline library will
+promote a container image if it can expect one to exist, which is when the most
+recent code change was a <strong>merge</strong> into the given code branch. The image would
+be expected to be built from an earlier commit, or while there was an open PR.</p>
+<p>You can override this default for the entire pipeline by setting the
+<code class="docutils literal"><span class="pre">promote_previous_image</span></code> config setting to <strong>false</strong>. You can also choose
+whether or not to promote images for each application environment individually
+through the <code class="docutils literal"><span class="pre">promote_previous_image</span></code> application_environment setting. This
+app_env setting takes priority over the config setting.</p>
+<p>An example of these settings’ usage:</p>
+<div class="code groovy highlight-default"><div class="highlight"><pre><span></span><span class="n">application_environments</span><span class="p">{</span>
+  <span class="n">dev</span><span class="p">{</span>
+    <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;dev&quot;</span>
+    <span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;Development&quot;</span>
+    <span class="n">promote_previous_image</span> <span class="o">=</span> <span class="n">false</span>
+  <span class="p">}</span>
+  <span class="n">prod</span><span class="p">{</span>
+    <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;prod&quot;</span>
+    <span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;Production&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">libraries</span><span class="p">{</span>
+  <span class="n">openshift</span><span class="p">{</span>
+    <span class="n">helm_configuration_repository</span> <span class="o">=</span> <span class="s2">&quot;https://github.boozallencsn.com/Red-Hat-Summit/helm-configuration.git&quot;</span>
+    <span class="n">helm_configuration_repository_credential</span> <span class="o">=</span> <span class="s2">&quot;github&quot;</span>
+    <span class="n">tiller_namespace</span> <span class="o">=</span> <span class="s2">&quot;rhs-tiller&quot;</span>
+    <span class="n">tiller_credential</span> <span class="o">=</span> <span class="s2">&quot;rhs-tiller&quot;</span>
+    <span class="n">promote_previous_image</span> <span class="o">=</span> <span class="n">true</span> <span class="o">//</span><span class="n">note</span><span class="p">:</span> <span class="n">making</span> <span class="n">this</span> <span class="n">setting</span> <span class="n">true</span> <span class="ow">is</span> <span class="n">redundant</span><span class="p">,</span> <span class="n">since</span> <span class="n">true</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">default</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="putting-it-all-together">
+<h3>Putting It All Together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils" id="id1">
+<caption><span class="caption-text">OpenShift Library Configuration Options</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+<th class="head">Default Value</th>
+<th class="head">Defined On</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>openshift_url</td>
+<td>The OpenShift Console URL when specified per app env</td>
+<td>&#160;</td>
+<td>app_env</td>
+</tr>
+<tr class="row-odd"><td>url</td>
+<td>The OpenShift Console URL when specified globally</td>
+<td>&#160;</td>
+<td>library spec</td>
+</tr>
+<tr class="row-even"><td>helm_configuration_repository</td>
+<td>The GitHub Repository containing the helm chart(s) for this application</td>
+<td>&#160;</td>
+<td>both</td>
+</tr>
+<tr class="row-odd"><td>helm_configuration_repository_credential</td>
+<td>The Jenkins credential ID to access the helm configuration GitHub repository</td>
+<td>&#160;</td>
+<td>both</td>
+</tr>
+<tr class="row-even"><td>tiller_namespace</td>
+<td>The tiller namespace for this application</td>
+<td>&#160;</td>
+<td>both</td>
+</tr>
+<tr class="row-odd"><td>tiller_credential</td>
+<td>The Jenkins credential ID referencing an OpenShift credential</td>
+<td>&#160;</td>
+<td>both</td>
+</tr>
+<tr class="row-even"><td>tiller_release_name</td>
+<td>The name of the release to deploy</td>
+<td>&#160;</td>
+<td>app env</td>
+</tr>
+<tr class="row-odd"><td>chart_values_file</td>
+<td>The values file to use for the release</td>
+<td>&#160;</td>
+<td>app_env</td>
+</tr>
+<tr class="row-even"><td>promote_previous_image</td>
+<td>Whether or not to promote a previously-built image</td>
+<td>(Boolean) true</td>
+<td>both</td>
+</tr>
+</tbody>
+</table>
+<div class="code groovy highlight-default"><div class="highlight"><pre><span></span><span class="n">application_environments</span><span class="p">{</span>
+  <span class="n">dev</span><span class="p">{</span>
+    <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;dev&quot;</span>
+    <span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;Development&quot;</span>
+    <span class="n">chart_values_file</span> <span class="o">=</span> <span class="s2">&quot;dev_values.yaml&quot;</span>
+  <span class="p">}</span>
+  <span class="n">test</span><span class="p">{</span>
+    <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span>
+    <span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;Test&quot;</span>
+    <span class="n">tiller_release_name</span> <span class="o">=</span> <span class="s2">&quot;banana&quot;</span>
+
+  <span class="p">}</span>
+  <span class="n">prod</span><span class="p">{</span>
+    <span class="n">short_name</span> <span class="o">=</span> <span class="s2">&quot;prod&quot;</span>
+    <span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;Production&quot;</span>
+    <span class="n">tiller_namespace</span> <span class="o">=</span> <span class="s2">&quot;rhs-tiller-prod&quot;</span>
+    <span class="n">tiller_credential</span> <span class="o">=</span> <span class="s2">&quot;rhs-tiller-prod&quot;</span>
+    <span class="n">openshift_url</span> <span class="o">=</span> <span class="s2">&quot;https://openshift.prod.example.com:8443&quot;</span>
+    <span class="n">promote_previous_image</span> <span class="o">=</span> <span class="n">true</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">libraries</span><span class="p">{</span>
+  <span class="n">openshift</span><span class="p">{</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://openshift.dev.example.com:8443&quot;</span>
+    <span class="n">helm_configuration_repository</span> <span class="o">=</span> <span class="s2">&quot;https://github.boozallencsn.com/Red-Hat-Summit/helm-configuration.git&quot;</span>
+    <span class="n">helm_configuration_repository_credential</span> <span class="o">=</span> <span class="s2">&quot;github&quot;</span>
+    <span class="n">tiller_namespace</span> <span class="o">=</span> <span class="s2">&quot;rhs-tiller&quot;</span>
+    <span class="n">tiller_credential</span> <span class="o">=</span> <span class="s2">&quot;rhs-tiller&quot;</span>
+    <span class="n">promote_previous_image</span> <span class="o">=</span> <span class="n">false</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="external-dependencies">
+<h2>External Dependencies<a class="headerlink" href="#external-dependencies" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Openshift is deployed and accessible from Jenkins</li>
+<li>Helm configuration repository creates</li>
+<li>Values files contain the <code class="docutils literal"><span class="pre">image_shas</span></code> key convention</li>
+<li>A Jenkins credential exists to access helm configuration repository</li>
+<li>A Jenkins credential exists to login with OpenShift CLI</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../owasp_dep_check/README.html" class="btn btn-neutral float-right" title="OWASP Dependency Check" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../github_enterprise/README.html" class="btn btn-neutral float-left" title="GitHub Enterprise" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Booz Allen Hamilton
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: jenkins-test
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Tags</dt>
+            <dd><a href="README.html">jenkins-test</a></dd>
+            <dd><a href="../../v1.0/openshift/README.html">v1.0</a></dd>
+        </dl>
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="../../master/openshift/README.html">master</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

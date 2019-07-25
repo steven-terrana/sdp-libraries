@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>OWASP ZAP &mdash; SDP Pipeline Libraries  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/banner.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Protractor" href="../protractor/README.html" />
+    <link rel="prev" title="OWASP Dependency Check" href="../owasp_dep_check/README.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SDP Pipeline Libraries
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../a11y/README.html">The A11y Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docker/README.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github/README.html">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github_enterprise/README.html">GitHub Enterprise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openshift/README.html">OpenShift</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../owasp_dep_check/README.html">OWASP Dependency Check</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">OWASP ZAP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#steps-contributed">Steps Contributed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#library-configuration-options">Library Configuration Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-configuration-snippet">Example Configuration Snippet</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#results">Results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../protractor/README.html">Protractor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdp/README.html">SDP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../slack/README.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sonarqube/README.html">SonarQube</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../twistlock/README.html">Twistlock</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SDP Pipeline Libraries</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>OWASP ZAP</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/owasp_zap/README.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+
+
+    
+    
+
+
+
+    <p class="scv-banner scv-sphinx_rtd_theme"><a href="../../master/owasp_zap/README.html"><b>Warning:</b> This document is for an old version of SDP Pipeline Libraries. The main version is master.</a></p>
+<div class="section" id="owasp-zap">
+<h1>OWASP ZAP<a class="headerlink" href="#owasp-zap" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">OWASP Zed Attack Proxy (ZAP)</a> is a tool that can help
+you automatically find security vulnerabilities in your web applications while
+you are developing and testing your applications. Its also a great tool for
+experienced pentesters to use for manual security testing.</p>
+<div class="section" id="steps-contributed">
+<h2>Steps Contributed<a class="headerlink" href="#steps-contributed" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>penetration_test</li>
+</ul>
+</div>
+<div class="section" id="library-configuration-options">
+<h2>Library Configuration Options<a class="headerlink" href="#library-configuration-options" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils" id="id1">
+<caption><span class="caption-text">OWASP ZAP Library Configuration Options</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+<th class="head">Default Value</th>
+<th class="head">Options</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>target</td>
+<td>The target url to pentest</td>
+<td>none</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>vulnerability_threshold</td>
+<td>Minimum alert level to include in report</td>
+<td>High</td>
+<td>Ignore | Low | Medium | High | Informational</td>
+</tr>
+</tbody>
+</table>
+<p><code class="code docutils literal"><span class="pre">target</span></code> is set to <code class="code docutils literal"><span class="pre">env.FRONTEND_URL</span></code> if available. If not then it uses the provided
+URL. If no URL is provided an error is thrown.</p>
+<div class="section" id="example-configuration-snippet">
+<h3>Example Configuration Snippet<a class="headerlink" href="#example-configuration-snippet" title="Permalink to this headline">¶</a></h3>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">libraries</span><span class="p">{</span>
+  <span class="n">owasp_zap</span><span class="p">{</span>
+    <span class="n">target</span> <span class="o">=</span> <span class="s2">&quot;https://example.com&quot;</span>
+    <span class="n">vulnerability_threshold</span> <span class="o">=</span> <span class="s2">&quot;Low&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="results">
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<img alt="OWASP ZAP example" src="owasp_zap/../../images/owasp_zap/report.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../protractor/README.html" class="btn btn-neutral float-right" title="Protractor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../owasp_dep_check/README.html" class="btn btn-neutral float-left" title="OWASP Dependency Check" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Booz Allen Hamilton
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: v1.0
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Tags</dt>
+            <dd><a href="../../jenkins-test/owasp_zap/README.html">jenkins-test</a></dd>
+            <dd><a href="README.html">v1.0</a></dd>
+        </dl>
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="../../master/owasp_zap/README.html">master</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

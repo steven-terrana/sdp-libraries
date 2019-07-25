@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The A11y Machine &mdash; SDP Pipeline Libraries  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/banner.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Docker" href="../docker/README.html" />
+    <link rel="prev" title="Pipeline Libraries" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SDP Pipeline Libraries
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The A11y Machine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#steps-contributed">Steps Contributed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#library-configuration-options">Library Configuration Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#results">Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#report-index">Report Index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#report-of-a-specific-url">Report of a specific URL</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../docker/README.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github/README.html">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github_enterprise/README.html">GitHub Enterprise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openshift/README.html">OpenShift</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../owasp_dep_check/README.html">OWASP Dependency Check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../owasp_zap/README.html">OWASP ZAP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../protractor/README.html">Protractor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdp/README.html">SDP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../slack/README.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sonarqube/README.html">SonarQube</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../twistlock/README.html">Twistlock</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SDP Pipeline Libraries</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>The A11y Machine</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/a11y/README.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+
+
+    
+    
+
+
+
+    <p class="scv-banner scv-sphinx_rtd_theme"><a href="../../master/a11y/README.html"><b>Warning:</b> This document is for an old version of SDP Pipeline Libraries. The main version is master.</a></p>
+<div class="section" id="the-a11y-machine">
+<h1>The A11y Machine<a class="headerlink" href="#the-a11y-machine" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/liip/TheA11yMachine">The A11y Machine</a> (or <cite>a11ym</cite> for short, spelled “alym”) is an <strong>automated accessibility testing tool</strong>
+which <strong>crawls</strong> and <strong>tests</strong> pages of any Web application to produce detailed
+reports. It validates pages against the following specifications/laws:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://www.w3.org/TR/WCAG20/">W3C Web Content Accessibility Guidelines</a>
+(WCAG) 2.0, including A, AA and AAA levels (<a class="reference external" href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head">understanding levels of
+conformance</a>)</li>
+<li>U.S. <a class="reference external" href="http://www.section508.gov/">Section 508</a> legislation</li>
+<li><a class="reference external" href="https://www.w3.org/TR/html/">W3C HTML5 Recommendation</a></li>
+</ul>
+</div></blockquote>
+<div class="section" id="steps-contributed">
+<h2>Steps Contributed<a class="headerlink" href="#steps-contributed" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>accessibility_compliance_test()</li>
+</ul>
+</div>
+<div class="section" id="library-configuration-options">
+<h2>Library Configuration Options<a class="headerlink" href="#library-configuration-options" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils" id="id2">
+<caption><span class="caption-text">a11y Library Configuration Options</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Field</strong></th>
+<th class="head"><strong>Description</strong></th>
+<th class="head"><strong>Default Value</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>url</td>
+<td>The url a11y will crawl and scan</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<p>A target URL can be given. However <cite>env.FRONTEND_URL</cite> supersedes all
+configurations. If no <cite>env.FRONTEND_URL</cite> is found then the provided target
+URL is used. If no URL is provided an error is thrown.</p>
+<div class="code groovy highlight-default"><div class="highlight"><pre><span></span><span class="n">libraries</span><span class="p">{</span>
+  <span class="n">a11y</span><span class="p">{</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://example.com&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="results">
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<p>The results of the scan are captured in an HTML report that gets archived
+by jenkins.</p>
+<div class="section" id="report-index">
+<h3>Report Index<a class="headerlink" href="#report-index" title="Permalink to this headline">¶</a></h3>
+<img alt="a11y/../../../docs/images/a11y/index.png" src="a11y/../../../docs/images/a11y/index.png" />
+</div>
+<div class="section" id="report-of-a-specific-url">
+<h3>Report of a specific URL<a class="headerlink" href="#report-of-a-specific-url" title="Permalink to this headline">¶</a></h3>
+<img alt="a11y/../../../docs/images/a11y/report.png" src="a11y/../../../docs/images/a11y/report.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../docker/README.html" class="btn btn-neutral float-right" title="Docker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Pipeline Libraries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Booz Allen Hamilton
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: jenkins-test
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Tags</dt>
+            <dd><a href="README.html">jenkins-test</a></dd>
+            <dd><a href="../../v1.0/a11y/README.html">v1.0</a></dd>
+        </dl>
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="../../master/a11y/README.html">master</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

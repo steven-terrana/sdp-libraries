@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SonarQube &mdash; SDP Pipeline Libraries  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/banner.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Twistlock" href="../twistlock/README.html" />
+    <link rel="prev" title="Slack" href="../slack/README.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SDP Pipeline Libraries
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Libraries</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../a11y/README.html">The A11y Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docker/README.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github/README.html">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github_enterprise/README.html">GitHub Enterprise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openshift/README.html">OpenShift</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../owasp_dep_check/README.html">OWASP Dependency Check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../owasp_zap/README.html">OWASP ZAP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../protractor/README.html">Protractor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdp/README.html">SDP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../slack/README.html">Slack</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SonarQube</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#steps-contributed">Steps Contributed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#library-configuration-options">Library Configuration Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-configuration-snippet">Example Configuration Snippet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sonar-scanner-configurations">Sonar Scanner Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#external-dependencies">External Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#faq">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../twistlock/README.html">Twistlock</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SDP Pipeline Libraries</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>SonarQube</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/sonarqube/README.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+
+
+
+
+
+<div class="section" id="sonarqube">
+<h1>SonarQube<a class="headerlink" href="#sonarqube" title="Permalink to this headline">¶</a></h1>
+<p>SonarQube is a tool used for <strong>static code analysis</strong>. Static code analysis is validating code as-written against
+industry standard practices.  It will help you find best practice violations and potential security vulnerabilities.</p>
+<p>Organizations can define Quality Profiles which are custom rule profiles that projects must use.  Quality Gates are then
+rules defining the organizational policies for code quality. SDP will, by default, fail the build if the Quality Gate fails.</p>
+<div class="section" id="steps-contributed">
+<h2>Steps Contributed<a class="headerlink" href="#steps-contributed" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>static_code_analysis()</li>
+</ul>
+</div>
+<div class="section" id="library-configuration-options">
+<h2>Library Configuration Options<a class="headerlink" href="#library-configuration-options" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils" id="id1">
+<caption><span class="caption-text">SonarQube Library Configuration Options</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+<th class="head">Default Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>credential_id</td>
+<td>A new credential can be used</td>
+<td>sonarqube</td>
+</tr>
+<tr class="row-odd"><td>enforce_quality_gate</td>
+<td>Determine whether the build will fail if the code does not pass the quality gate</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="example-configuration-snippet">
+<h2>Example Configuration Snippet<a class="headerlink" href="#example-configuration-snippet" title="Permalink to this headline">¶</a></h2>
+<div class="code groovy highlight-default"><div class="highlight"><pre><span></span><span class="n">libraries</span><span class="p">{</span>
+  <span class="n">sonarqube</span><span class="p">{</span>
+    <span class="n">credential_id</span> <span class="o">=</span> <span class="n">sonarqube</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sonar-scanner-configurations">
+<h2>Sonar Scanner Configurations<a class="headerlink" href="#sonar-scanner-configurations" title="Permalink to this headline">¶</a></h2>
+<p>Extra configuration options are available by leveraging SonarQube’s <a class="reference external" href="https://docs.sonarqube.org/display/SONAR/Analysis+Parameters">sonar-project.properties</a> file.
+the sonar-project.properties file should be added to root of the source repositoy.</p>
+</div>
+<div class="section" id="external-dependencies">
+<h2>External Dependencies<a class="headerlink" href="#external-dependencies" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>SonarQube must already be deployed. Reference the deployment script for SDP.</li>
+<li>Jenkins must have a credential to access SonarQube, this is done by default when using the deployment script.</li>
+<li>The SonarQube URL must be configured in <code class="docutils literal"><span class="pre">Manage</span> <span class="pre">Jenkins</span> <span class="pre">&gt;</span> <span class="pre">Configure</span> <span class="pre">System</span></code></li>
+</ul>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../twistlock/README.html" class="btn btn-neutral float-right" title="Twistlock" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../slack/README.html" class="btn btn-neutral float-left" title="Slack" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Booz Allen Hamilton
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: master
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Tags</dt>
+            <dd><a href="../jenkins-test/sonarqube/README.html">jenkins-test</a></dd>
+            <dd><a href="../v1.0/sonarqube/README.html">v1.0</a></dd>
+        </dl>
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="../master/sonarqube/README.html">master</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
