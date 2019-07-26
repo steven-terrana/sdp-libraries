@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Test Execution &mdash; SDP Pipeline Libraries  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/banner.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="FAQ" href="faq.html" />
+    <link rel="prev" title="Writing Tests" href="writing-tests.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> SDP Pipeline Libraries
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Libraries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../a11y/README.html">The A11y Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docker/README.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../github/README.html">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../github_enterprise/README.html">GitHub Enterprise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../openshift/README.html">OpenShift</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../owasp_dep_check/README.html">OWASP Dependency Check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../owasp_zap/README.html">OWASP ZAP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../protractor/README.html">Protractor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdp/README.html">SDP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../slack/README.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sonarqube/README.html">SonarQube</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../twistlock/README.html">Twistlock</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Resources</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Unit Testing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="jenkins-spock.html">Jenkins Spock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing-tests.html">Writing Tests</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Test Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html">FAQ</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">SDP Pipeline Libraries</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Unit Testing</a> &raquo;</li>
+        
+      <li>Test Execution</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/.docs/pages/unit-testing/executing-tests.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+
+
+
+
+
+<div class="section" id="test-execution">
+<span id="id1"></span><h1>Test Execution<a class="headerlink" href="#test-execution" title="Permalink to this headline">¶</a></h1>
+<p>For our SDP Pipeline Libraries, tests are placed in a directory called <code class="docutils literal"><span class="pre">unit-tests</span></code>
+within the library directory.</p>
+<div class="section" id="executing-tests-with-gradle">
+<h2>Executing tests with Gradle<a class="headerlink" href="#executing-tests-with-gradle" title="Permalink to this headline">¶</a></h2>
+<p>This repo has been set up to run Jenkins-Spock tests using Gradle.</p>
+<p>From the root of the sdp-libraries repository, run <code class="docutils literal"><span class="pre">make</span> <span class="pre">test</span></code>.</p>
+</div>
+<div class="section" id="executing-tests-with-docker">
+<h2>Executing tests with Docker<a class="headerlink" href="#executing-tests-with-docker" title="Permalink to this headline">¶</a></h2>
+<p>The unit tests can also be executed via Docker.  From the root
+of the sdp-libraries repository, run <code class="docutils literal"><span class="pre">make</span> <span class="pre">test</span> <span class="pre">docker</span></code>.</p>
+</div>
+<div class="section" id="viewing-test-results">
+<h2>Viewing Test Results<a class="headerlink" href="#viewing-test-results" title="Permalink to this headline">¶</a></h2>
+<p>Spock will create an HTML test report.  After running tests,
+you can run <code class="docutils literal"><span class="pre">open</span> <span class="pre">target/reports/tests/test/index.html</span></code>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="writing-tests.html" class="btn btn-neutral float-left" title="Writing Tests" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Booz Allen Hamilton
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: master
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Tags</dt>
+            <dd><a href="../../../../jenkins-test/index.html">jenkins-test</a></dd>
+            <dd><a href="../../../../v1.0/index.html">v1.0</a></dd>
+        </dl>
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="executing-tests.html">master</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

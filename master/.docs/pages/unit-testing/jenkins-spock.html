@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Jenkins Spock &mdash; SDP Pipeline Libraries  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/banner.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Writing Tests" href="writing-tests.html" />
+    <link rel="prev" title="Unit Testing" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> SDP Pipeline Libraries
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Libraries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../a11y/README.html">The A11y Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docker/README.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../github/README.html">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../github_enterprise/README.html">GitHub Enterprise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../openshift/README.html">OpenShift</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../owasp_dep_check/README.html">OWASP Dependency Check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../owasp_zap/README.html">OWASP ZAP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../protractor/README.html">Protractor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdp/README.html">SDP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../slack/README.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sonarqube/README.html">SonarQube</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../twistlock/README.html">Twistlock</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Resources</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Unit Testing</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Jenkins Spock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing-tests.html">Writing Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executing-tests.html">Test Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html">FAQ</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">SDP Pipeline Libraries</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Unit Testing</a> &raquo;</li>
+        
+      <li>Jenkins Spock</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/.docs/pages/unit-testing/jenkins-spock.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+
+
+
+
+
+<div class="section" id="jenkins-spock">
+<span id="id1"></span><h1>Jenkins Spock<a class="headerlink" href="#jenkins-spock" title="Permalink to this headline">¶</a></h1>
+<p>We test pipeline libraries using Jenkins-Spock, a variation of the Spock testing
+framework that has been designed around testing Jenkins pipelines. You can view
+the documentation for Jenkins-Spock on its <a href="https://github.com/homeaway/jenkins-spock" target="_blank">GitHub Repository</a>, while more
+general Spock documentation is available at <a href="http://spockframework.org/spock/docs" target="_blank">this link</a>.</p>
+<div class="section" id="writing-a-specification-file">
+<h2>Writing a Specification File<a class="headerlink" href="#writing-a-specification-file" title="Permalink to this headline">¶</a></h2>
+<p>A “specification” is a list of features derived from business requirements. A
+specification file contains that list of features as unit tests, and those
+tests validate that the features work as expected. There should be a separate
+file for each pipeline step in your library.</p>
+<p>Below is an outline of a specification file. It shows what you need to include
+in order to run tests, as well as some conventions for what to name methods and
+variables. Create a groovy file with the same name as the class (such as
+MyPipelineStepSpec.groovy) and use this outline to get you started, making sure
+to swap names with ones for your library.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Sample Specification</p>
+<ol class="last arabic simple">
+<li>Import the framework</li>
+<li>Create a class extending <code class="docutils literal"><span class="pre">JenkinsPipelineSpecification</span></code></li>
+<li>Create a field to house the loaded step</li>
+<li>Define a setup method where you will load the step</li>
+<li>Write a test</li>
+</ol>
+</div>
+<div class="highlight-groovy"><div class="highlight"><pre><span></span><span class="c1">// Start by importing the Jenkins-Spock framework Code</span>
+<span class="kn">import</span> <span class="nn">com.homeaway.devtools.jenkins.testing.JenkinsPipelineSpecification</span>
+
+<span class="c1">// Create a new class for the Spec</span>
+<span class="c1">// The naming convention is the pipeline step&#39;s name, followed by Spec,</span>
+<span class="c1">// all camel-cased starting w/ a capital.</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyPipelineStepSpec</span> <span class="kd">extends</span> <span class="n">JenkinsPipelineSpecification</span> <span class="o">{</span>
+
+  <span class="c1">// Define the variable that will store the step&#39;s groovy code. This variable</span>
+  <span class="c1">// follows the same naming variable as the class name, with Spec omitted.</span>
+  <span class="kt">def</span> <span class="n">MyPipelineStep</span> <span class="o">=</span> <span class="kc">null</span>
+
+  <span class="c1">// setup() is a fixture method that gets run before every test.</span>
+  <span class="c1">// http://spockframework.org/spock/docs/1.2/spock_primer.html#_fixture_methods</span>
+  <span class="kt">def</span> <span class="nf">setup</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// It&#39;s required to load the pipeline script as part of setup()</span>
+    <span class="c1">// With the library monorepo, pipeline step groovy files can be found in &quot;sdp/libraries&quot;</span>
+    <span class="n">MyPipelineStep</span> <span class="o">=</span> <span class="n">loadPipelineScriptForTest</span><span class="o">(</span><span class="s2">&quot;sdp/libraries/my_library/my_pipeline_step.groovy&quot;</span><span class="o">)</span>
+  <span class="o">}</span>
+
+  <span class="c1">// Write a test (i.e. Feature Method) for each feature you wish to validate</span>
+  <span class="c1">// http://spockframework.org/spock/docs/1.2/spock_primer.html#_feature_methods</span>
+  <span class="kt">def</span> <span class="s2">&quot;Successful Build Sends Success Result&quot;</span> <span class="o">()</span> <span class="o">{</span>
+    <span class="nl">setup:</span>
+      <span class="c1">// unlike in the pipeline, the config object is not loaded during</span>
+      <span class="c1">// unit tests. Use this to set it manually</span>
+      <span class="n">MyPipelineStep</span><span class="o">.</span><span class="na">getBinding</span><span class="o">().</span><span class="na">setVariable</span><span class="o">(</span><span class="s2">&quot;config&quot;</span><span class="o">,</span> <span class="o">[</span> <span class="nl">field:</span> <span class="s2">&quot;String&quot;</span> <span class="o">])</span>
+    <span class="nl">when:</span>
+      <span class="c1">// This is the &quot;stimulus&quot;. It does things so we can test what happens</span>
+      <span class="c1">// Typically, you execute the step&#39;s groovy code like this</span>
+      <span class="n">MyPipelineStep</span><span class="o">()</span>
+    <span class="nl">then:</span>
+      <span class="c1">// Here&#39;s where you describe the expected response</span>
+      <span class="c1">// If everything in here is valid, the test passes</span>
+      <span class="mi">1</span> <span class="o">*</span> <span class="n">getPipelineMock</span><span class="o">(</span><span class="s2">&quot;sh&quot;</span><span class="o">)(</span><span class="s2">&quot;echo \&quot;field = String\&quot;&quot;</span><span class="o">)</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="writing-tests.html" class="btn btn-neutral float-right" title="Writing Tests" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Unit Testing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Booz Allen Hamilton
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: master
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Tags</dt>
+            <dd><a href="../../../../jenkins-test/index.html">jenkins-test</a></dd>
+            <dd><a href="../../../../v1.0/index.html">v1.0</a></dd>
+        </dl>
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="jenkins-spock.html">master</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
