@@ -15,4 +15,6 @@ Pipeline Libraries
    :titlesonly:
    :caption: Resources
 
+   CONTRIBUTING
    .docs/pages/unit-testing/index
+   

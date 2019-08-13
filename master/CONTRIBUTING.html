@@ -1,0 +1,379 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Contribution Guide &mdash; SDP Pipeline Libraries  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="_static/style.css" type="text/css" />
+  <link rel="stylesheet" href="_static/banner.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Unit Testing" href=".docs/pages/unit-testing/index.html" />
+    <link rel="prev" title="Twistlock" href="twistlock/README.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SDP Pipeline Libraries
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Libraries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="a11y/README.html">The A11y Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker/README.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github/README.html">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github_enterprise/README.html">GitHub Enterprise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openshift/README.html">OpenShift</a></li>
+<li class="toctree-l1"><a class="reference internal" href="owasp_dep_check/README.html">OWASP Dependency Check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="owasp_zap/README.html">OWASP ZAP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protractor/README.html">Protractor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdp/README.html">SDP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slack/README.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sonarqube/README.html">SonarQube</a></li>
+<li class="toctree-l1"><a class="reference internal" href="twistlock/README.html">Twistlock</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Resources</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contribution Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href=".docs/pages/unit-testing/index.html">Unit Testing</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SDP Pipeline Libraries</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Contribution Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/CONTRIBUTING.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+
+
+
+
+
+<div class="section" id="contribution-guide">
+<span id="id1"></span><h1>Contribution Guide<a class="headerlink" href="#contribution-guide" title="Permalink to this headline">¶</a></h1>
+<p>Thanks for taking the time to read this! Whether you have an idea for a great
+feature, or have already made some improvements that you want to contribute,
+we really value your help in helping this project grow.</p>
+<p>This guide should help you find answers to common questions:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#what-is-an-sdp-library">What is an SDP library?</a></li>
+<li><a class="reference internal" href="#how-can-i-contribute">How can I contribute?</a></li>
+<li><a class="reference internal" href="#what-coding-or-style-conventions-should-i-follow">What coding or style conventions should I follow?</a></li>
+<li><a class="reference internal" href="#how-is-the-documentation-formatted">How is the documentation formatted?</a></li>
+<li><a class="reference internal" href="#how-do-i-test-my-changes">How do I test my changes?</a></li>
+<li><a class="reference internal" href="#where-can-i-report-a-bug">Where can I report a bug?</a></li>
+<li><a class="reference internal" href="#where-can-i-make-a-feature-suggestion">Where can I make a feature suggestion?</a></li>
+<li><a class="reference internal" href="#where-can-i-ask-other-questions">Where can I ask other questions?</a></li>
+</ul>
+<div class="section" id="what-is-an-sdp-library">
+<h2>What is an SDP library?<a class="headerlink" href="#what-is-an-sdp-library" title="Permalink to this headline">¶</a></h2>
+<p>Glad you asked! An SDP library is a collection of Jenkins pipeline steps that
+can be loaded and called using the Templating Engine plugin. These libraries
+are usually for using a certain tool (e.g. GitHub) in a software delivery
+pipeline. Check out our <a class="reference external" href="https://jenkinsci.github.io/templating-engine-plugin/pages/Library_Development/getting_started.html">documentation on SDP libraries</a> for more information,
+and browse this repository for examples.</p>
+</div>
+<div class="section" id="how-can-i-contribute">
+<h2>How can I contribute?<a class="headerlink" href="#how-can-i-contribute" title="Permalink to this headline">¶</a></h2>
+<p>Start by <a class="reference external" href="https://help.github.com/en/articles/creating-a-pull-request">opening a GitHub Pull Request</a> to the latest versioned branch
+(e.g. <code class="docutils literal"><span class="pre">1.1</span></code>) and filling out the template. We’re incredibly grateful for
+contributions, including</p>
+<ul class="simple">
+<li>new SDP libraries</li>
+<li>new features for existing SDP libraries</li>
+<li>improvements to existing SDP libraries</li>
+<li>bug fixes</li>
+</ul>
+<p>If you’re looking to contribute a feature suggestion, or want to help
+identify a bug, we appreciate that, too!</p>
+</div>
+<div class="section" id="what-coding-or-style-conventions-should-i-follow">
+<h2>What coding or style conventions should I follow?<a class="headerlink" href="#what-coding-or-style-conventions-should-i-follow" title="Permalink to this headline">¶</a></h2>
+<p>While we’re still in the process of establishing a style guide, here are a few
+general conventions we’ve adopted:</p>
+<ul class="simple">
+<li>Groovy files that define pipeline steps use snake_case for method and variable names</li>
+<li>Indents are two (2) spaces.</li>
+<li>Pipeline steps should not take any arguments. Any variables should be set in
+the <a class="reference external" href="https://jenkinsci.github.io/templating-engine-plugin/pages/Library_Development/externalizing_config.html#externalizing-library-configuration">pipeline configuration</a></li>
+<li>Pipeline steps’ code should be within a <a class="reference external" href="https://jenkins.io/doc/book/pipeline/#stage">stage</a> and a <a class="reference external" href="https://jenkins.io/doc/book/pipeline/#node">node</a></li>
+<li>Application source code is stored in a “workspace” <a class="reference external" href="https://jenkins.io/doc/pipeline/steps/workflow-basic-steps/#stash-stash-some-files-to-be-used-later-in-the-build">stash</a>.<ul>
+<li>Unstash the workspace if using the source code</li>
+<li>Stash the workspace again to capture any changes used by other steps</li>
+</ul>
+</li>
+</ul>
+<p>A good general reference is Cloudbees <a class="reference external" href="https://www.cloudbees.com/blog/top-10-best-practices-jenkins-pipeline-plugin">Top 10 Best Practices for Jenkins Pipeline Plugin</a>.
+For those unfamiliar with Groovy, Apache has a good <a class="reference external" href="https://groovy-lang.org/style-guide.html">Groovy Style Guide</a> covering
+some of the general differences between Groovy and other languages.
+As a general note, the SDP uses <em>scripted</em> Jenkins pipeline syntax, as opposed
+to <em>declarative</em> pipeline syntax.</p>
+</div>
+<div class="section" id="how-is-the-documentation-formatted">
+<h2>How is the documentation formatted?<a class="headerlink" href="#how-is-the-documentation-formatted" title="Permalink to this headline">¶</a></h2>
+<p>Our documentation, including this guide, is written in reStructuredText, which
+is a markup language similar to Markdown. If you’re unfamiliar with
+reStructuredText, there are README.rst files in existing libraries for
+reference, and <a class="reference external" href="http://docutils.sourceforge.net/rst.html#user-documentation">resources are available online</a>.</p>
+<p>We ask that the documentation include</p>
+<ul class="simple">
+<li>A general description of the library</li>
+<li>The pipeline steps the library contributes</li>
+<li>Information about any external configuration the library uses, including<ul>
+<li>Any fields in the library block</li>
+<li>The datatype of those fields, and whether or not they’re required</li>
+<li>Any other template primitives used (e.g. app_env’s)</li>
+</ul>
+</li>
+<li>Any external dependencies your library needs to work<ul>
+<li>Jenkins credentials</li>
+<li>Content in the source code repository</li>
+<li>Web services and related setup</li>
+<li>Any Jenkins plugins or other libraries/steps the library depends on</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="how-do-i-test-my-changes">
+<h2>How do I test my changes?<a class="headerlink" href="#how-do-i-test-my-changes" title="Permalink to this headline">¶</a></h2>
+<p>Check out <a class="reference external" href="https://boozallen.github.io/sdp-libraries/.docs/pages/unit-testing/index.html">our documentation on writing unit tests</a>.</p>
+</div>
+<div class="section" id="where-can-i-report-a-bug">
+<h2>Where can I report a bug?<a class="headerlink" href="#where-can-i-report-a-bug" title="Permalink to this headline">¶</a></h2>
+<p>One way is to create a <a class="reference external" href="https://help.github.com/en/articles/creating-an-issue">GitHub issue</a>. If you do, please</p>
+<ul class="simple">
+<li>include brief description</li>
+<li>list versions for Jenkins, the templating engine, and any plugins or other software that might be relevant</li>
+<li>describe how to recreate the issue</li>
+<li>give it the <em>bug</em> label, and any other relevant labels</li>
+</ul>
+<p>You can also talk with us directly on <a class="reference external" href="https://gitter.im/jenkinsci/templating-engine-plugin">our Gitter channel</a>, and other Booz
+Allen Hamilton employees can reach us through the sdp-users slack channel.</p>
+</div>
+<div class="section" id="where-can-i-make-a-feature-suggestion">
+<h2>Where can I make a feature suggestion?<a class="headerlink" href="#where-can-i-make-a-feature-suggestion" title="Permalink to this headline">¶</a></h2>
+<p>While we ask that GitHub issues be limited to bugs and other defects, we
+welcome feature suggestions in <a class="reference external" href="https://gitter.im/jenkinsci/templating-engine-plugin">our Gitter channel</a> and internal sdp-users
+slack channel.</p>
+<p>You can also submit a feature suggestion along with the actual feature in a pull
+request, which we appreciate immensely!</p>
+</div>
+<div class="section" id="where-can-i-ask-other-questions">
+<h2>Where can I ask other questions?<a class="headerlink" href="#where-can-i-ask-other-questions" title="Permalink to this headline">¶</a></h2>
+<p>If you have questions that <a class="reference external" href="https://boozallen.github.io/sdp-docs/html/index.html">our documentation</a> can’t answer, you can reach us
+through the Gitter and Slack channels mentioned above.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href=".docs/pages/unit-testing/index.html" class="btn btn-neutral float-right" title="Unit Testing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="twistlock/README.html" class="btn btn-neutral float-left" title="Twistlock" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Booz Allen Hamilton
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: master
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Tags</dt>
+            <dd><a href="../jenkins-test/index.html">jenkins-test</a></dd>
+            <dd><a href="../v1.0/index.html">v1.0</a></dd>
+        </dl>
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="CONTRIBUTING.html">master</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-144247959-4', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
