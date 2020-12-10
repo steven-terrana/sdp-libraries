@@ -31,6 +31,10 @@ void call(){
       
         println "before stash"
         stash name: 'workspace', allowEmpty: true, useDefaultExcludes: false
+      
+          getBinding().getVariables().each{ k, v ->
+      println "${k}: ${v}"
+    }
         println "after stash"
     }
 }
