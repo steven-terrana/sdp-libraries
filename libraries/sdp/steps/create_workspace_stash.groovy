@@ -7,9 +7,11 @@ package libraries.sdp
 
 import hudson.AbortException
 
-@Validate // validate so this runs prior to other @Init steps
-@NonCPS
+@Validate
 void call(){
+    getBinding().getVariables().each{ k, v ->
+      println "${k}: ${v}"
+    }
     node{
         cleanWs()
         try{
@@ -27,6 +29,8 @@ void call(){
           println "print finally"  
         }
       
+        println "before stash"
         stash name: 'workspace', allowEmpty: true, useDefaultExcludes: false
+        println "after stash"
     }
 }
