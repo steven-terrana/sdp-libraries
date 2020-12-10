@@ -9,6 +9,7 @@ import hudson.AbortException
 
 @Validate
 void call(){
+  /*
     node{
         cleanWs()
         try{
@@ -18,4 +19,5 @@ void call(){
         }      
         stash name: 'workspace', allowEmpty: true, useDefaultExcludes: false
     }
+    */
 }
