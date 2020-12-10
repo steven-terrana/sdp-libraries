@@ -10,10 +10,12 @@ import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfiguratio
 
 @Init
 void call(){
-    node{
+    /*node{
         writeFile text: "a = true", file: "pipeline_config.groovy"
         archiveArtifacts "pipeline_config.groovy"
     }
+    */
+  println 'hi'
 }
 
 /*
