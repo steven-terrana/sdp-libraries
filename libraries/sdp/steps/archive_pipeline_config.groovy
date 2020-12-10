@@ -11,7 +11,7 @@ import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfiguratio
 @Init
 void call(){
     node{
-        writeFile text: (new PipelineConfigurationDsl(null)).serialize(getPipelineConfig()), file: "pipeline_config.groovy"
+        writeFile text: getPipelineConfig(), file: "pipeline_config.groovy"
         archiveArtifacts "pipeline_config.groovy"
     }
 }
@@ -20,5 +20,5 @@ void call(){
 def getPipelineConfig(){
   PipelineConfigurationObject aggregated = new PipelineConfigurationObject(null)
   aggregated.config = pipelineConfig
-  return aggregated
+  return new PipelineConfigurationDsl(null).serialize(aggregated)
 }
