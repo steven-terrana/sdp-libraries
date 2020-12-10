@@ -9,6 +9,7 @@ import hudson.AbortException
 
 @Validate
 void call(){
+  println "hi"
   /*
     node{
         cleanWs()
