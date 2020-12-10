@@ -9,7 +9,6 @@ import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfiguratio
 import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationDsl
 
 @Init
-@NonCPS
 void call(){
     PipelineConfigurationObject aggregated = new PipelineConfigurationObject(null)
     aggregated.config = pipelineConfig
