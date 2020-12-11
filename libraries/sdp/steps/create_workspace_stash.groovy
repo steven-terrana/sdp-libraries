@@ -9,16 +9,13 @@ import hudson.AbortException
 
 @Validate
 void call(){
-  println "hi"
-  /*
-    node{
-        cleanWs()
-        try{
-            checkout scm
-        }catch(AbortException ex) {
-            println "scm var not present, skipping source code checkout" 
-        }      
-        stash name: 'workspace', allowEmpty: true, useDefaultExcludes: false
-    }
-    */
+  node{
+    cleanWs()
+    try{
+      checkout scm
+    }catch(AbortException ex) {
+      println "scm var not present, skipping source code checkout" 
+    }      
+    stash name: 'workspace', allowEmpty: true, useDefaultExcludes: false
+  }
 }
