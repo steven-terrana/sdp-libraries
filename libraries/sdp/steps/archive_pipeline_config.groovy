@@ -16,6 +16,9 @@ void call(){
     }
     */
   println 'hi'
+  node{ 
+    sh "echo hello, world"
+  }
 }
 
 /*
