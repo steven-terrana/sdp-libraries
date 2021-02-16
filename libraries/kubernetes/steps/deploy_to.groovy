@@ -10,36 +10,36 @@ void call(app_env){
     // validate required parameters
 
     // configuration repository storing the chart
-    def config_repo = app_env.helm_configuration_repository ?:
+    String config_repo = app_env.helm_configuration_repository ?:
                       config.helm_configuration_repository  ?:
                       {error "helm_configuration_repository not defined in library config or application environment config"}()
 
     // jenkins credential ID for user to access config repo
     // definable in library spec or app env spec via "helm_configuration_repository_credential"
     // or - a globally defined github credential at the root of the pipeline config "github_credential"
-    def git_cred = app_env.helm_configuration_repository_credential ?:
+    String git_cred = app_env.helm_configuration_repository_credential ?:
                    config.helm_configuration_repository_credential  ?:
                    pipelineConfig.github_credential              ?:
                    {error "GitHub Credential For Configuration Repository Not Defined"}()
 
-    def branch = app_env.helm_configuration_repository_branch ?: 
+    String branch = app_env.helm_configuration_repository_branch ?: 
                  config.helm_configuration_repository_branch ?:
                  "main"
 
-    def working_directory = app_env.helm_configuration_repository_start_path ?: 
+    String working_directory = app_env.helm_configuration_repository_start_path ?: 
                             config.helm_configuration_repository_start_path ?:
                             "."
 
     /*
        k8s credential with kubeconfig 
     */
-    def k8s_credential = app_env.k8s_credential ?:
+    String k8s_credential = app_env.k8s_credential ?:
                             config.k8s_credential  ?:
                             {error "Kubernetes Credential Not Defined"}()
     /*
        k8s context
     */
-    def k8s_context = app_env.k8s_context ?:
+    String k8s_context = app_env.k8s_context ?:
                   config.k8s_context            ?:
                   {error "Kubernetes Context Not Defined"}()
 
@@ -49,7 +49,7 @@ void call(app_env){
        or will use "short_name" if present on app_env object.
        will fail otherwise.
     */
-    def release = app_env.release_name ?:
+    String release = app_env.release_name ?:
                   app_env.short_name          ?:
                   {error "App Env Must Specify release_name or short_name"}()
 
@@ -60,7 +60,7 @@ void call(app_env){
        otherwise "values.${app_env.short_name}.yaml" will be present if defined and exists
        otherwise - will fail
     */
-    def values_file = app_env.chart_values_file ?:
+    String values_file = app_env.chart_values_file ?:
                       app_env.short_name ? "values.${app_env.short_name}.yaml" :
                       {error "Values File To Use For This Chart Not Defined"}()
 
@@ -74,7 +74,7 @@ void call(app_env){
         NOTE: this puts a dependency on the docker library (or whatever image building library
         is used.  this library must supply a retag method)
     */
-    def promote_image = app_env.promote_previous_image != null ? app_env.promote_previous_image :
+    Boolean promote_image = app_env.promote_previous_image != null ? app_env.promote_previous_image :
                         config.promote_previous_image != null ? config.promote_previous_image :
                         true
     if (!(promote_image instanceof Boolean)){
@@ -103,7 +103,7 @@ void call(app_env){
   }
 }
 
-void update_values_file(values_file, config_repo){
+void update_values_file(String values_file, String config_repo){
   if (!fileExists(values_file))
     error "Values File ${values_file} does not exist in ${config_repo}"
 
@@ -116,11 +116,19 @@ void update_values_file(values_file, config_repo){
 
 }
 
-void do_release(release, values_file){
-  sh "helm upgrade --install -f ${values_file} ${release} ."
+void do_release(String release, String values_file){
+  String chart = "."
+  // if the user configured a remote chart repository
+  // then add the repo and change $chart to be 
+  // the remote chart
+  if(config.remote_chart_repository){
+    sh "helm repo add chart-repo ${config.remote_chart_repository}"
+    chart = "chart-repo/${config.remote_chart_name}"
+  }
+  sh "helm upgrade --install -f ${values_file} ${release} ${chart}"
 }
 
-void push_config_update(values_file){
+void push_config_update(String values_file){
   echo "updating values file -> ${values_file}"
   git add: values_file
   git commit: "Updating ${values_file} for ${env.REPO_NAME} images"
