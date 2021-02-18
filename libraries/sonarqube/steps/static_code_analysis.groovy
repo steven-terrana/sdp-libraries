@@ -78,7 +78,7 @@ def call(){
                     sh "mkdir -p empty"
 
                     try{
-                      sh "npm install -D typescript"
+                      sh "npm install -g typescript"
                     }catch(any){}
                     
                     // build out the command to execute
