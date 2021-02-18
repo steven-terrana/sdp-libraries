@@ -108,8 +108,6 @@ void update_values_file(String values_file, String config_repo){
     error "Values File ${values_file} does not exist in ${config_repo}"
 
   values = readYaml file: values_file
-  key = env.REPO_NAME.replaceAll("-","_")
-  echo "writing new Git SHA ${env.GIT_SHA} to image_shas.${key} in ${values_file}"
   values.image_shas[key] = env.GIT_SHA
   sh "rm ${values_file}"
   writeYaml file: values_file, data: values
@@ -117,10 +115,10 @@ void update_values_file(String values_file, String config_repo){
 }
 
 void do_release(String release, String values_file){
-  String chart = "."
   // if the user configured a remote chart repository
   // then add the repo and change $chart to be 
   // the remote chart
+  String chart = "."
   if(config.remote_chart_repository){
     sh "helm repo add chart-repo ${config.remote_chart_repository}"
     chart = "chart-repo/${config.remote_chart_name}"
