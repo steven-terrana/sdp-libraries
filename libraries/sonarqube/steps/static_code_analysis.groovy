@@ -79,11 +79,10 @@ def call(){
 
                     try{
                       sh "npm install -g typescript"
-                      sh "export NODE_PATH=/usr/lib/node_modules"
                     }catch(any){}
                     
                     // build out the command to execute
-                    ArrayList command = [ "sonar-scanner -X" ]
+                    ArrayList command = [ "export NODE_PATH=/usr/lib/node_modules && ",  "sonar-scanner -X" ]
 
                     /*
                         if an API token was used, only provide -Dsonar.login 
