@@ -76,6 +76,10 @@ def call(){
                         are not present during sonarqube analysis
                     */
                     sh "mkdir -p empty"
+
+                    try{
+                      sh "npm install -D typescript"
+                    }
                     
                     // build out the command to execute
                     ArrayList command = [ "sonar-scanner -X" ]
