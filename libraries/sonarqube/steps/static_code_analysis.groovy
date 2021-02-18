@@ -79,7 +79,7 @@ def call(){
 
                     try{
                       sh "npm install -D typescript"
-                    }
+                    }catch(){}
                     
                     // build out the command to execute
                     ArrayList command = [ "sonar-scanner -X" ]
