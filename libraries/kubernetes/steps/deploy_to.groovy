@@ -123,7 +123,8 @@ void do_release(String release, String values_file){
     sh "helm repo add chart-repo ${config.remote_chart_repository}"
     chart = "chart-repo/${config.remote_chart_name}"
   }
-  sh "helm upgrade --install -f ${values_file} ${release} ${chart}"
+  String team = env.GIT_URL.split("/").last().split("-").first()​​​​​​​​
+  sh "helm upgrade --install --namespace ${team} -f ${values_file} ${release} ${chart}"
 }
 
 void push_config_update(String values_file){
