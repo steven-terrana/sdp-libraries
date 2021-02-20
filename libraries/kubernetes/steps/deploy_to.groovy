@@ -124,8 +124,13 @@ void do_release(String release, String values_file){
     chart = "chart-repo/${config.remote_chart_name}"
   }
   println "determining team"
-  String team = env.GIT_URL.split("/").last().split("-").first()​​​​​​​​
+  String team = this.getTeamName()
   sh "helm upgrade --install --create-namespace --namespace ${team} -f ${values_file} ${release} ${chart}"
+}
+
+@NonCPS
+String getTeamName(){
+  return env.GIT_URL.split("/").last().split("-").first()​​​​​​​​
 }
 
 void push_config_update(String values_file){
