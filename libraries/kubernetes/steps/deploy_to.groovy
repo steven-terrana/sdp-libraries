@@ -10,9 +10,9 @@ void call(app_env){
     // validate required parameters
 
     // configuration repository storing the chart
-    String config_repo = app_env.helm_configuration_repository ?:
-                      config.helm_configuration_repository  ?:
-                      {error "helm_configuration_repository not defined in library config or application environment config"}()
+    // for the hackathon, this is going to be dynamically hard coded 
+    String team_name = this.getTeamName()
+    String config_repo = "https://github.boozallencsn.com/uip-hackathon-2021/${team_name}-infra".toString()
 
     // jenkins credential ID for user to access config repo
     // definable in library spec or app env spec via "helm_configuration_repository_credential"
@@ -129,12 +129,6 @@ void do_release(String release, String values_file){
   }
   println "determining team"
   String team = this.getTeamName()
-  println """
-  team: ${team}
-  values_file: ${values_file}
-  release: ${release}
-  chart: ${chart}
-  """
   sh "helm upgrade --install --namespace ${team} -f ${values_file} ${team} ${chart}"
 }
 
