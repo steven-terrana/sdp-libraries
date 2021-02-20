@@ -136,7 +136,12 @@ void do_release(String release, String values_file){
 
 @NonCPS
 String getTeamName(){
-  return env.GIT_URL.split("/").last().split("-").first()​​​​​​​​
+  def teamParts = env.GIT_URL.split("/")
+  String repoName = teamParts.last()
+  String repoParts = repoName.split("-")
+  String teamName = repoParts.first()
+
+  return teamName
 }
 
 void push_config_update(String values_file){
