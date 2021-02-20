@@ -125,6 +125,12 @@ void do_release(String release, String values_file){
   }
   println "determining team"
   String team = this.getTeamName()
+  println """
+  team: ${team}
+  values_file: ${values_file}
+  release: ${release}
+  chart: ${chart}
+  """
   sh "helm upgrade --install --create-namespace --namespace ${team} -f ${values_file} ${release} ${chart}"
 }
 
