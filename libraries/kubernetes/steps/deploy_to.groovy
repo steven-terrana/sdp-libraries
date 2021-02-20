@@ -138,7 +138,7 @@ void do_release(String release, String values_file){
 String getTeamName(){
   def teamParts = env.GIT_URL.split("/")
   String repoName = teamParts.last()
-  String repoParts = repoName.split("-")
+  def repoParts = repoName.split("-")
   String teamName = repoParts.first()
 
   return teamName
