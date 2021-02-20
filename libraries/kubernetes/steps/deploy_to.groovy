@@ -109,7 +109,11 @@ void update_values_file(String values_file, String config_repo){
 
   values = readYaml file: values_file
   println "git URL var is: ${env.GIT_URL}"
-  values.find{ k, v -> v.github_repo.equals(env.GIT_URL) }.getValue().image.tag = env.GIT_SHA 
+  values.find{ k, v -> 
+      if(v.containsKey("github_repo")){
+        v.github_repo.equals(env.GIT_URL)
+      }
+  }.getValue().image.tag = env.GIT_SHA 
   sh "rm ${values_file}"
   writeYaml file: values_file, data: values
 }
