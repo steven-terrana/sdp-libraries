@@ -124,8 +124,7 @@ void do_release(String release, String values_file){
     chart = "chart-repo/${config.remote_chart_name}"
   }
   println "determining team"
-  String team = env.GIT_URL.split("/").last().split("-").first()
-  println "found team: ${team}"​​​​​​​​
+  String team = env.GIT_URL.split("/").last().split("-").first()​​​​​​​​
   sh "helm upgrade --install --create-namespace --namespace ${team} -f ${values_file} ${release} ${chart}"
 }
 
